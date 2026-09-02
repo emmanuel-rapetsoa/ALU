@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --black: #080a09;
+  --panel: #0d110e;
+  --input: #080b09;
+
+  --green: #39ff88;
+  --green-muted: #5d9972;
+
+  --border: rgba(57, 255, 136, 0.18);
+
+  --text: #e7f5eb;
+  --muted: #66776b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--black);
+  font-family: "Space Mono", monospace;
+}
+
+/* Page */
+
+.login-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(57, 255, 136, 0.055),
+      transparent 45%
+    ),
+    var(--black);
+}
+
+/* Main login box */
+
+.login-container {
+  width: min(440px, 100%);
+
+  padding: 0;
+
+  border: 1px solid var(--border);
+
+  background: var(--panel);
+}
+
+/* Header */
+
+.login-header {
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 24px;
+
+  border-bottom: 1px solid var(--border);
+
+  color: var(--muted);
+
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.logo-mark {
+  color: var(--green);
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Content */
+
+.login-content {
+  padding: 55px 40px 45px;
+}
+
+/* Status */
+
+.system-status {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 18px;
+
+  color: var(--green);
+
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.system-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--green);
+
+  box-shadow: 0 0 8px var(--green);
+}
+
+/* Heading */
+
+.login-content h2 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+/* Subtitle */
+
+.subtitle {
+  margin: 12px 0 35px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+/* Fields */
+
+.fields {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: 8px;
+
+  color: var(--green-muted);
+
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.field input {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  border: 1px solid var(--border);
+
+  background: var(--input);
+
+  color: var(--text);
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.field input:focus {
+  border-color: rgba(57, 255, 136, 0.65);
+
+  box-shadow:
+    0 0 12px rgba(57, 255, 136, 0.08);
+}
+
+/* Buttons */
+
+.buttons {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.login-button {
+  flex: 1;
+
+  padding: 14px 10px;
+
+  border: 1px solid var(--green);
+
+  background: transparent;
+
+  color: var(--green);
+
+  font-family: inherit;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.login-button:hover {
+  background: var(--green);
+
+  color: var(--black);
+
+  box-shadow:
+    0 0 18px rgba(57, 255, 136, 0.15);
+}
+
+/* Login status */
+
+.login-status {
+  margin-top: 30px;
+
+  text-align: center;
+
+  color: #3f5045;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .login-content {
+    padding: 45px 25px 35px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
+
